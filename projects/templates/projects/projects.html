@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>{{ page }}</p>
+
+    {% if number > 10 %}
+        <p>Number is greater than 10</p>
+    {% else %}
+         <p>Number is less than 10</p>
+    {% endif %}
+    <h1>Projects</h1>
+
+    <ul>
+        {% for project in projects %}
+            <li>Title: <a href="{% url 'project' project.id %}">{{project.title}}</a> --- {{project.description}} </li>
+
+        {% endfor %}
+    
+    </ul>
+
+</body>
+</html>
+
+{% endblock content %}
