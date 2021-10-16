@@ -61,6 +61,10 @@ Get familier with
 
 
 ----
+
+* CSRF Token ensures that our data wasn't manipulated and it is safe and clean .
+
+----
 ### Database Schema
 
 ![image](https://user-images.githubusercontent.com/63875409/137578201-0f762510-672e-4358-8fc1-8d9af6325318.png)
