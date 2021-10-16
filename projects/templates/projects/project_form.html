@@ -4,15 +4,11 @@
  
  <h1>Project Form</h1>
 
-<form action="POST">
+<form  action="" method="POST">
 
     {% csrf_token %}
-    {{ form.title.label }}
-    {{ form.title }}
-    {% for field in form %}
-        {{ field.label }}
-        {{ field }}
-    {% endfor %} 
+   
+    {{form.as_p}}
     <input type="submit">
 
 </form>
