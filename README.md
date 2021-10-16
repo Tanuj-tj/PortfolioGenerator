@@ -36,5 +36,26 @@ Get familier with
 * auto_now_add=True Means whenever this model instance will be created generate a DateTime accordingly
 
 * Create a model class -> makemigrations -> migrate -> register the model with the admin panel 
+
+
+----
+
+**Relationships**
+
+![image](https://user-images.githubusercontent.com/63875409/137578318-6abd3221-e28b-47cf-888d-09e2c03a8b91.png)
+
+* One to Many Example 
+
+![image](https://user-images.githubusercontent.com/63875409/137578588-003dde6f-2b61-47dc-a06b-325172eab861.png)
+
+* Many to Many Example
+
+![image](https://user-images.githubusercontent.com/63875409/137578718-f99acf7d-0171-4329-afbb-71b7ed52a19d.png)
+
+
+----
+### Database Schema
+
+![image](https://user-images.githubusercontent.com/63875409/137578201-0f762510-672e-4358-8fc1-8d9af6325318.png)
  
 
