@@ -52,6 +52,13 @@ Get familier with
 
 ![image](https://user-images.githubusercontent.com/63875409/137578718-f99acf7d-0171-4329-afbb-71b7ed52a19d.png)
 
+![image](https://user-images.githubusercontent.com/63875409/137581078-4d6037f9-83dd-4da4-b57f-12e4d127b19f.png)
+----
+
+### How a Standatd Query Works
+
+![image](https://user-images.githubusercontent.com/63875409/137580485-cb7045c0-32b1-4f5d-9735-72d7b778a4b8.png)
+
 
 ----
 ### Database Schema
