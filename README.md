@@ -64,6 +64,23 @@ Get familier with
 
 * CSRF Token ensures that our data wasn't manipulated and it is safe and clean .
 
+**Section 4**
+
+* Static files are any external files like css,js etc .
+* create a folder 
+static 
+    -> images
+    -> css
+    -> js
+
+* Configure the statuc dir path in settings.py
+
+* Added a featured_image column in project table 
+
+* Configure the media upload path in settings.py
+
+23.05
+
 ----
 ### Database Schema
 
