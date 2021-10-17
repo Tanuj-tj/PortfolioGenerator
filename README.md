@@ -79,7 +79,18 @@ static
 
 * Configure the media upload path in settings.py
 
-23.05
+* When we put our project in production then we cannot access the static files so we need to define STATIC_ROOT in settings.py
+
+-> STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+-> After creating the above file we neet to use python manage.py collectstatic command
+
+* So our static files are bundled up but we still need a third party  library to access the files .
+
+* pip install whitenoise , Whitenoise is a library which allows us to access the static files 
+
+Section 5
+
+Theam installation
 
 ----
 ### Database Schema
