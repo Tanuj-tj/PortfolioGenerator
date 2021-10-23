@@ -88,18 +88,27 @@ static
 
 * pip install whitenoise , Whitenoise is a library which allows us to access the static files 
 
-Section 5
-
-Theam installation
-
 ----
 ### Database Schema
 
 ![image](https://user-images.githubusercontent.com/63875409/137578201-0f762510-672e-4358-8fc1-8d9af6325318.png)
  
+----------
 
 
+Section 5
 
+(Theam installation)
 
-Module 4 :
- Part 2
+* Applying Themes to the project
+
+*  {% for tag in projects.tags.all %}
+        <span style="border:1px solid grey">{{ tag }}</span>
+    {% endfor %}
+
+    Allows us to access many to many relationship
+
+* If more then one vote is there then we will pluralize the vote 
+ Vote{{ project.vote_total | pluralize:"s" }}
+
+34.40
