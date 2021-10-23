@@ -111,4 +111,4 @@ Section 5
 * If more then one vote is there then we will pluralize the vote 
  Vote{{ project.vote_total | pluralize:"s" }}
 
-34.40
+* Worked with the Themes
