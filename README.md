@@ -112,3 +112,29 @@ Section 5
  Vote{{ project.vote_total | pluralize:"s" }}
 
 * Worked with the Themes
+
+
+----------
+
+Section 6
+
+(Adding more apps)
+
+* Create a new app users
+
+- Configure the app in setting.py file
+- Added template->users->profiles.html
+- added a function profiles in views.py file which renders the page profiels.html
+- create a urls.py file and pass an empty path
+- In the main project folders inside urls.py file set the patters users/   
+
+* Profile has one to one relatio with the user 
+
+* Every time we create a user , a profile is automatically generated
+
+* models.py -> Profile Class
+
+* Create a many to one relationship in project to profile by specifing a foreign key in owner column 
+
+Will watch
+002 Add & Render Profiles.mp4
