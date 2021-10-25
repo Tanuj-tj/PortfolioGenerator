@@ -136,5 +136,12 @@ Section 6
 
 * Create a many to one relationship in project to profile by specifing a foreign key in owner column 
 
-Will watch
-002 Add & Render Profiles.mp4
+* Import the template for users page
+
+*  {{ profile.bio|slice:"150" }} Limit the characters
+
+* Create Skills model inside users app
+
+Add and render profiles
+15.59
+some issue with loading the tags
