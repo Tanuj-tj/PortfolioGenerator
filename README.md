@@ -143,5 +143,15 @@ Section 6
 * Create Skills model inside users app
 
 Add and render profiles
-15.59
-some issue with loading the tags
+
+* topSkills = profile.skill_set.exclude(description_exact="")
+  -> If skills does not have a description do not includ it
+
+* otherSkills = profile.skill_set.filter(description="")
+  -> Include the skills which has an empty description
+
+* Error in
+href="{% url 'user-profile' project.owner.id %}"
+
+Upnext
+Signals
