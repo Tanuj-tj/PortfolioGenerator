@@ -142,7 +142,7 @@ Section 6
 
 * Create Skills model inside users app
 
-Add and render profiles
+**Add and render profiles**
 
 * topSkills = profile.skill_set.exclude(description_exact="")
   -> If skills does not have a description do not includ it
@@ -151,7 +151,25 @@ Add and render profiles
   -> Include the skills which has an empty description
 
 * Error in
-href="{% url 'user-profile' project.owner.id %}"
+```href="{% url 'user-profile' project.owner.id %}" ```
 
-Upnext
-Signals
+**Signals**
+
+* When a user registers itself and is added to the database so we want to fire up some event to let them know via email that they now have an account in some website .
+
+* Signals are the way to listen the actions performed in our website
+
+![image](https://user-images.githubusercontent.com/63875409/138898735-b13f597b-f0c4-4bbc-b974-37027f2080e6.png)
+
+* Create signals insider users -> models.py
+
+from django.db.models.signals import post_save
+
+def profileUpdated(sender, instance, created, **kwargs):
+    print("Profile Saved!")
+
+post_save.connect(profileUpdated, sender=Profile)
+
+* Some issue in creating profile automatically
+
+Rewatch the signals video
