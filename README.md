@@ -181,3 +181,17 @@ Signals
         import users.signals
 
   - Create this method under app.py file to let django know about our signals.py file
+
+
+****
+
+Section 7
+(Authentication)
+
+![image](https://user-images.githubusercontent.com/63875409/139125977-3263d9e8-dadf-4723-a410-0fadf1a0a046.png)
+
+* When we run our initial migrations few of the tables are created one of them is sessions, which simply stores users sessions
+
+* It creates a session Id and puts it into the browser 
+
+13.12
