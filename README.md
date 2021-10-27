@@ -170,6 +170,14 @@ def profileUpdated(sender, instance, created, **kwargs):
 
 post_save.connect(profileUpdated, sender=Profile)
 
-* Some issue in creating profile automatically
+* Some issue in creating profile automatically(Solved)
 
-Rewatch the signals video
+Signals
+- Whenever a new user is created or deleted the profile is automatically created or deleted
+
+* Create a seperate signals.py file under user app
+
+* def ready(self):
+        import users.signals
+
+  - Create this method under app.py file to let django know about our signals.py file
