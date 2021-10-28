@@ -188,10 +188,23 @@ Signals
 Section 7
 (Authentication)
 
+**User Login, Logout and Flash Messages**
+
 ![image](https://user-images.githubusercontent.com/63875409/139125977-3263d9e8-dadf-4723-a410-0fadf1a0a046.png)
 
 * When we run our initial migrations few of the tables are created one of them is sessions, which simply stores users sessions
 
 * It creates a session Id and puts it into the browser 
 
-13.12
+* Create a loginUser and logoutUser view
+
+* Inorder to restrict unauthorised users to access certain pages of our website we use
+ - from django.contrib.auth.decorators import login_required
+
+ - user @login_required(login_url="login") above the view which we want to restrict
+
+ * from django.contrib import messages 
+  - Attach a pop up messages with the user sessions
+
+
+**User Registration**

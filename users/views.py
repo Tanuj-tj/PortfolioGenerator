@@ -1,25 +1,44 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login,logout, authenticate
+
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.contrib.auth.models import User
 from .models import Profile
 
 # Create your views here.
 
-def loginPage(request):
+def loginUser(request):
+    
+    # Restrict the user to access /login when then are already logged in
+    if request.user.is_authenticated:
+        return redirect('profiles')
 
     if request.method == 'POST':
-        username = request.POST('username')
-        password = request.POST('password')
+        username = request.POST['username']
+        password = request.POST['password']
 
         try:
             user = User.objects.get(username=username)
         except:
-            print("Username does not exist")
+            messages.error(request, 'Username does not exist')
         
         user = authenticate(request, username=username,password=password)
 
-    return render(request,'users/login_register.html')    
+        if user is not None:
+            login(request, user)
+            return redirect('profiles')
+        else:
+            messages.error(request, 'Username OR password is incorrect')
+
+    return render(request,'users/login_register.html')  
+
+
+def logoutUser(request):
+    logout(request)
+    messages.error(request, 'User was logged out!')
+    return redirect('login')  
 
 def profiles(request):
     profiles = Profile.objects.all()
