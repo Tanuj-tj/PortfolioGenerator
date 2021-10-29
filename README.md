@@ -208,3 +208,15 @@ Section 7
 
 
 **User Registration**
+
+* Create a registerUser view inside user app
+
+* from django.contrib.auth.forms import UserCreationForm
+ - Import UserCreation form so most of the things like password hashing is done internally we are not suppose to do it explicitly 
+
+* Customize the user creation form
+
+* Create a form.py file inside users app
+
+
+**Styling Login and Register Page**

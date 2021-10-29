@@ -1,16 +1,19 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.contrib.auth import login,logout, authenticate
-
+#from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
 from .models import Profile
+from .form import CustomUserCreationForm
 
 # Create your views here.
 
 def loginUser(request):
     
+    page = 'login'
+
     # Restrict the user to access /login when then are already logged in
     if request.user.is_authenticated:
         return redirect('profiles')
@@ -39,6 +42,33 @@ def logoutUser(request):
     logout(request)
     messages.error(request, 'User was logged out!')
     return redirect('login')  
+
+def registerUser(request):
+    page = 'register'
+    #form = UserCreationForm()
+    form = CustomUserCreationForm
+
+    if request.method == 'POST':
+        #form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+
+            # making sure that the username is lowercase
+            user.username = user.username.lower()
+            user.save()
+
+            messages.success(request, 'User account was created')   
+
+            login(request ,user)
+            return redirect('profiles')
+
+        else:
+            messages.success(request, 'An error has occured during registration')   
+
+
+    context = {'page' : page, 'form':form}  
+    return render(request, 'users/login_register.html', context)
 
 def profiles(request):
     profiles = Profile.objects.all()
