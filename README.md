@@ -220,3 +220,31 @@ Section 7
 
 
 **Styling Login and Register Page**
+
+*  Inorder to load static files in our templates 
+   - {% load static %}
+
+* Reflect the login.html and signup.html templates in login_register.html under user -> template
+
+* Styling for register page will not get reflected because we are using django forms and the filed are automatically fetched .
+
+* Inorder to get the styling below code will be used which is picked up from 
+
+def __init__(self, *args, **kwargs):
+        super(CustomUserCreationForm, self).__init__(*args, **kwargs)
+
+        for name, field in self.fields.items():
+            field.widget.attrs.update({ 'class':'input'})
+
+
+* Output some helper text and some error fields
+
+* {{ field.help_text }} will bring all the helper text 
+
+* Style the alert messages
+
+**Issue with the closing button in alert box
+
+
+Section 8
+(User Action)
