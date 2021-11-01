@@ -255,6 +255,8 @@ Section 8
 
 * We will display the information of logdin user on the account page where user can edit the info.
 
+* Crete a userAccount view
+
 * Loggdin users info can be fetched via `requers.user`
 
 * Render all the userinfo in accounts page
@@ -262,3 +264,15 @@ Section 8
 * skills are all rendered at once here we don't specipy skills with and without description .
 
 **User Edit Profile**
+
+* User Should have the ability to edit there own account inside account page
+
+* Adding CRUD functionalities to user account page
+
+* Create a `editAccount` view and a template `profile_form`
+
+* Under forms.py create a class `ProfileForm`
+
+* Under signals.py create `updateUser`
+
+**User Project CRUD**
