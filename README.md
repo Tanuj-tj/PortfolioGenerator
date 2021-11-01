@@ -248,3 +248,17 @@ def __init__(self, *args, **kwargs):
 
 Section 8
 (User Action)
+
+**User Account**
+
+* Add a account section so that user can add projects from there itself
+
+* We will display the information of logdin user on the account page where user can edit the info.
+
+* Loggdin users info can be fetched via `requers.user`
+
+* Render all the userinfo in accounts page
+
+* skills are all rendered at once here we don't specipy skills with and without description .
+
+**User Edit Profile**
