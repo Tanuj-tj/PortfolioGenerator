@@ -276,3 +276,7 @@ Section 8
 * Under signals.py create `updateUser`
 
 **User Project CRUD**
+
+* We will add update project code and make sure that only the loggedin user can make modicifations to it .
+
+**Add, Edit & Delete add skills**
