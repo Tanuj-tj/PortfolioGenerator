@@ -303,3 +303,15 @@ Section 9
 (Search and Pagination)
 
 **Search**
+
+* name__icontains means removing the case sensitivity
+
+* Inside users app cereate a utils.py file which contains all the utilities functions .
+
+* Create searchProfiles function inside utils.py file
+
+* Create search function for profile and for project
+
+* Create a utils.py file in projects app also
+
+**Pagination**
