@@ -280,3 +280,26 @@ Section 8
 * We will add update project code and make sure that only the loggedin user can make modicifations to it .
 
 **Add, Edit & Delete add skills**
+
+* Under users app template folder create `skill_form.html`
+
+* Under views.py create a `createSkill` view
+
+* Create `SkillForm` class under form.py
+
+  - fields = '__all__'  => To fetch all the fields
+  - exclude = ['owner']  => To exclude some of the field
+
+* Create `UpdateSkill` view
+
+* Added template to our add and update skill forms
+
+* Create `deleteSkill` view
+
+* Dynamic link  `href="{{ request.GET.next }"` `href="{% url 'delete-skill' skill.id %}?next=/account"`
+
+
+Section 9
+(Search and Pagination)
+
+**Search**
