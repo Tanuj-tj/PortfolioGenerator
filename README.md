@@ -315,3 +315,24 @@ Section 9
 * Create a utils.py file in projects app also
 
 **Pagination**
+
+
+* Add Pagination to the projects and profiles
+
+* Order the projects by date 
+
+* Insider models.py under projects app add
+
+  class Meta:
+        ordering = ['-created']   # Ascending Oder
+
+  class Meta:
+        ordering = ['-created']   # Descending Oder
+
+* https://docs.djangoproject.com/en/3.2/topics/pagination/
+
+*  `&#10094;` add this to get the back arrow symbol and `Next &#10095;` for the next arrow symbol in HTML  
+
+
+
+
