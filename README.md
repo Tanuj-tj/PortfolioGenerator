@@ -333,6 +333,7 @@ Section 9
 
 *  `&#10094;` add this to get the back arrow symbol and `Next &#10095;` for the next arrow symbol in HTML  
 
-
+25.16
+(Customize the pagination section to not have buttons more then 10)
 
 
