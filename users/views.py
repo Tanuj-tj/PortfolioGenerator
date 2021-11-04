@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from django.db.models import Q
 from .models import Profile, Skill
 from .form import CustomUserCreationForm, ProfileForm, SkillForm
-from .utils import seachProfiles
+from .utils import seachProfiles, paginateProfiles
 
 # Create your views here.
 
@@ -69,13 +69,25 @@ def registerUser(request):
             messages.success(request, 'An error has occured during registration')   
 
 
-    context = {'page' : page, 'form':form}  
+    context = {
+            'page' : page, 
+            'form':form
+            }
+
     return render(request, 'users/login_register.html', context)
 
 def profiles(request):
-    
+
     profiles,search_query = seachProfiles(request)
-    context = {'profiles' : profiles, 'search_query':search_query}
+
+    custom_range,profiles = paginateProfiles(request,profiles,3)
+
+    context = { 
+              'profiles' : profiles, 
+              'search_query':search_query,
+              'custom_range':custom_range,
+              }
+
     return render(request, 'users/profiles.html', context)
 
 
