@@ -47,6 +47,11 @@
 * Review
 * Tag
 
+### Upnext
+---
+* Add Messages Model
+* DataBase (MySql)
+* Deployemnt (AWS)
 
 ### Database Schema
 ---

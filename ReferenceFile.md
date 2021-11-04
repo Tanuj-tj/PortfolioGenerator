@@ -336,4 +336,15 @@ Section 9
 25.16
 (Customize the pagination section to not have buttons more then 10)
 
+* Create logic in pagination if the number of pages passes a certain limit .
+
+* create a `paginateProject` view in utils.py and keep all the pagination related login there .
+
+* Create a seperate html page inside root templage foder `pagination.html` and put the pagination related html login in there
+
+* {% include 'pagination.html' with queryset=projects custom_range=custom_range %}
+
+  - In the above include we are passing variable queryset and custom_range to the pagination.html code
+
+
 

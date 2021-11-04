@@ -5,31 +5,19 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from .models import Project,Tag
 from .forms import ProjectForm
-from .utils import searchProjects
+from .utils import searchProjects, paginateProject
 
 def projects(request):
 
     projects, search_query = searchProjects(request)
 
-    # First page which consists of 3 projects
-    page = request.GET.get('page')
-    #page = 1
-    results = 3
-    paginator = Paginator(projects, results)
-    
-    try:
-        projects = paginator.page(page)
-    except PageNotAnInteger:
-        page = 1
-        projects = paginator.page(page)
-    except EmptyPage:
-        page = paginator.num_pages  
-        projects = paginator.page(page)
+    custom_range,projects = paginateProject(request,projects,6)
 
     context = {
         'projects': projects,
         'seach_query':search_query,
-        'paginator' : paginator,
+        #'paginator' : paginator,
+        'custom_range':custom_range,
     }
     return render(request, 'projects/projects.html', context)
 
