@@ -371,4 +371,12 @@ class Meta:
 
 * {{ review.body | linebreaks }} linebreak is added if we added some line break while giving reviews .
 
-* Added `ReviewForm` inside forms.py under projects app .
+* Added `ReviewForm` inside forms.py under projects app.
+
+* create a method `getVoteCount` inside models.py of projects and put a prpperty decorator above it.
+
+* We run the method by `projectObj.getVoteCount` inside views.py this is done because of the property decorator .
+
+* Order the projects by vote_ratio, vote_total, title
+
+* Add a condition to make sure that we can't vote on our own project and the users which aren't logdin can't vote.
