@@ -380,3 +380,15 @@ class Meta:
 * Order the projects by vote_ratio, vote_total, title
 
 * Add a condition to make sure that we can't vote on our own project and the users which aren't logdin can't vote.
+
+* queryset = self.review_set.all().values_list('owner__id', flat=True)
+  - Here we are getting list of all the users and flat = True ensures that we will get the actual id not just the object.
+
+* Enter the above conditions in single-project.html
+
+* return redirect(request.GET['next'] if 'next' in request.GET else 'account')
+
+ - The above condition inside views.py will make sure that when we login to add a review then we will redirected to the same project page where we left.
+
+
+ **Send Message to other users**

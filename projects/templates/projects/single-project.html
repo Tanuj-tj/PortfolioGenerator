@@ -57,17 +57,38 @@
             <h5 class="project--rating">
               {{ project.vote_ratio}}% Postitive Feedback ( {{project.vote_total}} Vote{{ project.vote_total | pluralize:"s" }} )
             </h5>
+            
+            
+            {% comment %} If the user has already left a review {% endcomment %}
 
-            <form class="form" action="{% url 'project' project.id %}" method="POST">
-              {% csrf_token %}
-              {% for field in form %}
-              <div class="form__field">
-                <label for="formInput#textarea">{{ field.label }}</label>
-                {{ field }}
-              </div>
-              {% endfor %}
-              <input class="btn btn--sub btn--lg" type="submit" value="Comments" />
-            </form>
+            {% if request.user.profile.id in project.reviewers %}
+            <p>You have already submitted your review for this project</p>
+
+            {% comment %} If the user is the owner of the project {% endcomment %}
+
+            {% elif request.user.profile == project.owner%}
+            <p>You cannot review your own work</p>
+
+            {% comment %} If the user is neighter the owner or he reviews the form before the it can submit the form {% endcomment %}
+          
+            {% elif request.user.is_authenticated%}
+              <form class="form" action="{% url 'project' project.id %}" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form__field">
+                  <label for="formInput#textarea">{{ field.label }}</label>
+                  {{ field }}
+                </div>
+                {% endfor %}
+                <input class="btn btn--sub btn--lg" type="submit" value="Comments" />
+              </form>
+           
+            {% comment %} If the user is not loggdin the send them to the login page {% endcomment %}
+            
+            {% else %}
+            <a href="{% url 'login' %}?next={{ request.path }}">Please Login to leave a review</a>
+            {% endif %}
+
             <div class="commentList">
               {% for review in project.review_set.all %}
               {% if review.body %}
