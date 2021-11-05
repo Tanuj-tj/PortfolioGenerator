@@ -2,9 +2,10 @@ from django.core import paginator
 from django.shortcuts import redirect, render
 from django.http.response import HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from .models import Project,Tag
-from .forms import ProjectForm
+from .models import Project, Review,Tag
+from .forms import ProjectForm, ReviewForm
 from .utils import searchProjects, paginateProject
 
 def projects(request):
@@ -23,10 +24,24 @@ def projects(request):
 
 def project(request,pk):
     projectObj = Project.objects.get(id=pk)
+    form = ReviewForm()
     tags = projectObj.tags.all()
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        review = form.save(commit=False)
+        review.project = projectObj
+        review.owner = request.user.profile
+        review.save()
+
+        # Update project votecount
+        messages.success(request, 'Your review was successfully submitted')
+        return redirect('project', pk=projectObj.id)
+
     context = {
         'project':projectObj,  
-        'tags' : tags,  
+        'tags' : tags,
+        'form':form,  
     }
     return render(request, 'projects/single-project.html', context)
 

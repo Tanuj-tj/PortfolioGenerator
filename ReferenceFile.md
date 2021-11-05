@@ -370,3 +370,5 @@ class Meta:
 * Inside single-project modify the code to iterate through reviews section
 
 * {{ review.body | linebreaks }} linebreak is added if we added some line break while giving reviews .
+
+* Added `ReviewForm` inside forms.py under projects app .
