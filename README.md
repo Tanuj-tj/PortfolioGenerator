@@ -2,6 +2,7 @@
 
 ### About
 ---
+DevSearch is a Professional Portfolio generator web application where users are allowed to maintain their profiles, add projects, and also can interact with one another.
 
 ### Installation
 ---

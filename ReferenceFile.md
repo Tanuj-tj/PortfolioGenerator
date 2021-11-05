@@ -392,3 +392,12 @@ class Meta:
 
 
  **Send Message to other users**
+
+ * Create a `Message` class in models.py under users app
+
+ * Inside view.py and under templates of users app create a function `inbox` and `inbox.html` file .
+
+ * We have `related names` argument in our recepent column because both sender and recepent are having profile as a referenced table .
+
+ 18:49 
+ (Some issue while rendering message) 
