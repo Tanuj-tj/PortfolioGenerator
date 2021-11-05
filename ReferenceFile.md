@@ -348,3 +348,25 @@ Section 9
 
 
 
+**Search + Pagination Hacky Fix**
+
+* Some issue with searching with pagination (Not Fixed)
+
+
+Section 10
+(Reviews and Messages )
+
+**Reviews**
+
+
+* Under Review model inside project app 
+class Meta:
+    unique_together = [['owner','project']]
+
+  - No instance of a Review can have save owner and same project
+
+* Added a owner column with foreign key relation with the profile table 
+
+* Inside single-project modify the code to iterate through reviews section
+
+* {{ review.body | linebreaks }} linebreak is added if we added some line break while giving reviews .
