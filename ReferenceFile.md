@@ -410,3 +410,13 @@ class Meta:
 
 * Making sure that whenever the message is read it is marked as read
 `message.is_read = True`
+
+* Creating a form to send message to other developers .
+
+* Create a template `message_form.html` inside users app
+
+* create a `createMessage` view
+
+* Create a `MessageForm` class under form.py file
+
+* send message option should not be visible to our own profile
