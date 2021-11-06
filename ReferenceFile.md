@@ -400,4 +400,13 @@ class Meta:
  * We have `related names` argument in our recepent column because both sender and recepent are having profile as a referenced table .
 
  18:49 
- (Some issue while rendering message) 
+ (Some issue while rendering message) (Fixed)
+
+* Add `message.html` file to template->user->message.html which allows user to read a specific message.
+
+* Create a `viewMessage` view inside  users app
+
+* `{{ message.body|linebreaksbr }}` will ensure that linebreaks are actually added
+
+* Making sure that whenever the message is read it is marked as read
+`message.is_read = True`
