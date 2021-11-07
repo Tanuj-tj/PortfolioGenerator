@@ -420,3 +420,21 @@ class Meta:
 * Create a `MessageForm` class under form.py file
 
 * send message option should not be visible to our own profile
+
+Section 11
+(Sending Emails and Passoword Reset)
+
+* `https://docs.djangoproject.com/en/3.2/topics/email/`
+
+* # Configuring Email Service with django under setting.py file
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'tanujshrivastava2@gmail.com'
+EMAIL_HOST_PASSWORD = '#######'
+
+* In signals.py file under createProfile section 
+
+* Generate a app password from gmail account and add to setting.py
