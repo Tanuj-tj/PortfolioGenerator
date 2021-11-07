@@ -423,6 +423,8 @@ class Meta:
 
 Section 11
 (Sending Emails and Passoword Reset)
+   
+**Sending Welcome Emails**
 
 * `https://docs.djangoproject.com/en/3.2/topics/email/`
 
@@ -438,3 +440,19 @@ EMAIL_HOST_PASSWORD = '#######'
 * In signals.py file under createProfile section 
 
 * Generate a app password from gmail account and add to setting.py
+
+**Password Reset**
+
+(Will be add soon)
+
+Section 12
+(Building an API) 
+
+(Will look at it soon)
+
+Section 13
+(Production Preparation and Deployemnt)
+
+**Code Cleanup and Bug Fixes**
+
+* Adding seperate form for tags.
