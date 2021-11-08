@@ -455,4 +455,26 @@ Section 13
 
 **Code Cleanup and Bug Fixes**
 
-* Adding seperate form for tags.
+* Adding seperate form for tags. (Will add soon)
+
+**Connecting to Postgres DB**
+
+* Crediantials to connect with postgres DB
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'devsearch',
+        'USER':'postgres',
+        'PASSWORD':'tanuj',
+        'HOST':'localhost',
+        'PORT':'5432',
+    }
+}
+
+* Installing driver `pip install psycopg2`
+
+* After configuring the postgres DB with our application we will create users .
+
+Deploying the project on Heroku
+
