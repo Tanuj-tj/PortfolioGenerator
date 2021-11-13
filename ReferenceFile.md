@@ -2,7 +2,7 @@
 
 **Example of urls.py file :**
 
-![005 URLs and Views](https://user-images.githubusercontent.com/63875409/135449864-f52055ba-fb9d-48f5-99d8-6367ef735277.jpg)
+![URLs and Views](https://user-images.githubusercontent.com/63875409/141648408-ecd4ab2e-3d5d-44b7-bc08-b024c41c3745.jpg)
 
 **Section 2**
 
@@ -42,22 +42,22 @@ Get familier with
 
 **Relationships**
 
-![image](https://user-images.githubusercontent.com/63875409/137578318-6abd3221-e28b-47cf-888d-09e2c03a8b91.png)
+![Relactionships](https://user-images.githubusercontent.com/63875409/141648518-7f5cf9fc-6970-4d51-b770-4254a74998be.jpg)
 
 * One to Many Example 
 
-![image](https://user-images.githubusercontent.com/63875409/137578588-003dde6f-2b61-47dc-a06b-325172eab861.png)
+![One to Many](https://user-images.githubusercontent.com/63875409/141648558-aa183212-bd8a-4157-af69-369fec1662fd.jpg)
+
 
 * Many to Many Example
 
-![image](https://user-images.githubusercontent.com/63875409/137578718-f99acf7d-0171-4329-afbb-71b7ed52a19d.png)
+![ManyToMany](https://user-images.githubusercontent.com/63875409/141648588-f41868ba-6ac3-40d3-aaf4-b1bb7692c489.jpg)
 
 ![image](https://user-images.githubusercontent.com/63875409/137581078-4d6037f9-83dd-4da4-b57f-12e4d127b19f.png)
 ----
 
 ### How a Standatd Query Works
-
-![image](https://user-images.githubusercontent.com/63875409/137580485-cb7045c0-32b1-4f5d-9735-72d7b778a4b8.png)
+![Querysets](https://user-images.githubusercontent.com/63875409/141648637-55df5e1f-1eb9-449f-8af4-76b314cf39c4.png)
 
 
 ----
@@ -159,7 +159,7 @@ Section 6
 
 * Signals are the way to listen the actions performed in our website
 
-![image](https://user-images.githubusercontent.com/63875409/138898735-b13f597b-f0c4-4bbc-b974-37027f2080e6.png)
+![Signals](https://user-images.githubusercontent.com/63875409/141648720-beda89a7-2586-4fe8-9a47-343801716800.jpg)
 
 * Create signals insider users -> models.py
 
@@ -190,7 +190,7 @@ Section 7
 
 **User Login, Logout and Flash Messages**
 
-![image](https://user-images.githubusercontent.com/63875409/139125977-3263d9e8-dadf-4723-a410-0fadf1a0a046.png)
+![Authentication Vs Authorization](https://user-images.githubusercontent.com/63875409/141648758-94a5df56-0618-4e93-aece-e5ce85f40c73.png)
 
 * When we run our initial migrations few of the tables are created one of them is sessions, which simply stores users sessions
 
